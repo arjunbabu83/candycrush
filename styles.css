@@ -1,97 +1,80 @@
+/* General Styles */
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #FF9A9E, #FAD0C4);
+  color: #333;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  color: #fff;
+  min-height: 100vh;
 }
 
-.game-container {
+.container {
   text-align: center;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  max-width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
 }
 
-h1 {
-  font-size: 2.5rem;
+/* Title Box */
+.title-box {
   margin-bottom: 20px;
 }
 
-.score-board {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+.title-box h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #6C63FF;
 }
 
+.title-box p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #FF6584;
+}
+
+/* Score Box */
+.score-box {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #6C63FF;
+}
+
+/* Game Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
-  margin-bottom: 20px;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .grid div {
-  background: rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  background: #F0F0F0;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: transform 0.2s;
-  aspect-ratio: 1;
+  transition: transform 0.2s, background 0.2s;
 }
 
 .grid div:hover {
   transform: scale(1.1);
+  background: #FF6584;
 }
 
-.message {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  background: #ff6f61;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background: #ff3b2f;
-}
-
-/* Mobile Styles */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  .grid {
-    grid-template-columns: repeat(5, 50px);
-    gap: 5px;
-  }
-
-  .grid div {
-    font-size: 1.5rem;
-  }
-
-  .score-board {
-    font-size: 1.2rem;
-  }
-
-  button {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-}
+/* Fruit Colors */
+.grid div[data-color="red"] { background: #FF6B6B; }
+.grid div[data-color="yellow"] { background: #FFD93D; }
+.grid div[data-color="green"] { background: #6BCB77; }
+.grid div[data-color="blue"] { background: #4D96FF; }
+.grid div[data-color="purple"] { background: #845EC2; }
