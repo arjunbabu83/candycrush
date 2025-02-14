@@ -1,4 +1,3 @@
-/* General Styles */
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(135deg, #ff9a9e, #fad0c4);
@@ -45,7 +44,7 @@ h1 {
   font-size: 2rem;
   cursor: pointer;
   transition: transform 0.2s;
-  aspect-ratio: 1; /* Ensure squares are always equal in width and height */
+  aspect-ratio: 1;
 }
 
 .grid div:hover {
@@ -81,17 +80,14 @@ button:hover {
   .grid {
     grid-template-columns: repeat(5, 50px);
     gap: 5px;
-  margin-bottom: 15px;
   }
 
   .grid div {
     font-size: 1.5rem;
-  border-radius: 8px;
   }
 
   .score-board {
     font-size: 1.2rem;
-  margin-bottom: 15px;
   }
 
   button {
