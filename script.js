@@ -14,7 +14,11 @@ function createGrid() {
     square.setAttribute('data-id', i);
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     square.setAttribute('data-color', randomColor);
-    square.textContent = '🍎🍌🍇🍊🍒'.split('')[colors.indexOf(randomColor)];
+
+    // Use Unicode emojis directly
+    const emojis = ['🍎', '🍌', '🍇', '🍊', '🍒'];
+    square.textContent = emojis[colors.indexOf(randomColor)];
+
     grid.appendChild(square);
     fruits.push(square);
   }
@@ -55,6 +59,8 @@ function dragEnd() {
   if (beingReplaced && beingDragged !== beingReplaced) {
     swapFruits(beingDragged, beingReplaced);
     checkForMatches();
+    beingDragged = null;
+    beingReplaced = null;
   }
 }
 
