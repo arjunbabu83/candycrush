@@ -3,19 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Candy Crush Game</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Candy Crush Clone</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="game-container">
-    <h1>🎮 Candy Crush 🍬</h1>
-    <div class="score-board">
+  <div class="container">
+    <!-- Game Title -->
+    <div class="title-box">
+      <h1>🍬 Candy Crush Clone 🍭</h1>
+      <p>Match colorful fruits to score points!</p>
+    </div>
+
+    <!-- Score Display -->
+    <div class="score-box">
       <span>Score: </span>
       <span id="score">0</span>
     </div>
+
+    <!-- Game Grid -->
     <div class="grid"></div>
-    <div class="message" id="message"></div>
-    <button id="reset">Reset Game</button>
   </div>
   <script src="script.js"></script>
 </body>
